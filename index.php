@@ -1,6 +1,10 @@
 <html>
 <head>
-<meta http-equiv="Refresh" content="30">
+<?php 
+if (date('H')<=15 && date('H')>9) {
+	echo '<meta http-equiv="Refresh" content="30">';
+}
+?>
 <title>php practice</title>
 </head>
 
