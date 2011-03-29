@@ -1,6 +1,6 @@
 <html>
 <head>
-<meta http-equiv="Refresh" content="60">
+<meta http-equiv="Refresh" content="30">
 <title>php practice</title>
 </head>
 <hr>
@@ -9,7 +9,7 @@
 $shanghai = file("http://hq.sinajs.cn/list=s_sh000001");
 $shanghai = implode($shanghai);
 $shanghai = explode(",", $shanghai);
-echo $shanghai[1]."   &nbsp &nbsp&nbsp".$shanghai[3]."%";
+echo "<a href=http://stockdata.stock.hexun.com/indexhq_000001_1.shtml target=_blank>".$shanghai[1]."</a>   &nbsp &nbsp&nbsp".$shanghai[3]."%";
 echo "<hr>";
 
 /*$db = new mysqli("localhost","molezz","zz","stock");
