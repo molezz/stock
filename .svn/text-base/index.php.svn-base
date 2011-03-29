@@ -1,29 +1,15 @@
 <html>
 <head>
-<meta http-equiv="Refresh" content="30">
+<meta http-equiv="Refresh" content="60">
 <title>php practice</title>
 </head>
-
-<script type="text/javascript" src="http://www.google.com/jsapi?key=notsupplied-wizard"></script> 
-<script type="text/javascript"> 
-google.load("feeds", "1"); 
-function initialize() { 
-var feedControl = new google.feeds.FeedControl(); 
-feedControl.addFeed("http://bbs.sjtu.edu.cn/bbsrss?board=stock", "bbs");
-feedControl.addFeed("https://github.com/molezz.atom", "github");
-feedControl.draw(document.getElementById("feedControl")); 
-} 
-google.setOnLoadCallback(initialize); 
-</script> 
-<div id="feedControl">Loading</div> 
-
 <hr>
 <table border="0"  width="400">
 <?php
 $shanghai = file("http://hq.sinajs.cn/list=s_sh000001");
 $shanghai = implode($shanghai);
 $shanghai = explode(",", $shanghai);
-echo "<a href=http://stockdata.stock.hexun.com/indexhq_000001_1.shtml target=_blank>".$shanghai[1]."</a>   &nbsp &nbsp&nbsp".$shanghai[3]."%";
+echo $shanghai[1]."   &nbsp &nbsp&nbsp".$shanghai[3]."%";
 echo "<hr>";
 
 /*$db = new mysqli("localhost","molezz","zz","stock");
